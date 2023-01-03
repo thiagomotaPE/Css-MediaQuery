@@ -1,0 +1,72 @@
+h1{
+    color: red;
+}
+h3{
+    color: black;
+}
+
+@media screen and (max-width: 500px){
+    /* MAX WIDTH = TELAS MENORES QUE ALGUMA RESOLUÇÃO */
+    h1{
+        color: blue;
+    }
+}
+
+@media screen and (min-width: 600px){
+    /* mobile first
+    MIN WIDTH = TELAS MAIORES QUE ALGUMA RESOLUÇÃO
+    */ 
+    h3{
+        color: green;
+    }   
+}
+
+
+@media (min-width: 300px) and (max-width: 400px){
+    /* AND na media query 
+    intervalos de tamanhos de tela(telas de 300px ate 400px
+    */
+    h4{
+        font-size: 3em;
+    }
+}
+
+@media (min-width: 200px), (orientation: landscape){
+    /* OR
+        REPRESENTADO PELA VIRGULA
+        usado para adicionar propriedades a mais de um tamanho de tela 
+        neste caso adicionando cor ao h2 quando a tela tiver 200px de largura ou estiver deitada
+    */
+    h2{
+        color: purple;
+    }
+
+}
+
+@media (orientation: landscape){
+    /* ORIENTATION - pra quando o usuario for abrir o site com o celular com a tela virada */
+    h5{
+        color: yellow;
+    }
+}
+
+
+
+/* outros modos
+-screen --------- a que eu acabei de usar no exemplo acima
+-print --------- vai mudar apenas quando for imprimir algo(impressora)
+-speech ---------- 
+-all -------------- vai alterar as definições em todos os modos
+*/
+
+/* REGRAS MEDIA QUERIES 
+    1- ordem no css importa
+*/
+
+/* breakpoints
+    300px - 479px = smartphones
+    480px - 768px  = tablets
+    769px - 1024px = telas menores, notbooks
+    1025px - 1200px = desktop
+    1201 - + = telas maiores, tv's
+*/
